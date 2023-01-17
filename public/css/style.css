@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500;1,700&display=swap');
+:root{
+--lg-font: 'Open Sans', sans-serif;
+--sm-font: 'Roboto', sans-serif;
+--color : #ed74ba ;
+}
+
+body{
+    font-family: var(--sm-font);
+}
+
+
+.navbar{
+    box-shadow:0px 3px 9px rgba(0, 0, 0, 0.1) !important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05) ;
+}
+/* header */
+.name-company h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+#header{
+    background: url(../img/background.jpg) top/cover no-repeat;
+    margin-top: 100px;
+
+    height: calc(100vh - 72px) ;
+}
+.carousel-inner h1{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+
+.carousel-item .btn{
+    border-color: #fff !important;
+}
+
+.carousel-item .btn:hover{
+    border-color: var(--color) !important;
+}
+/* ******* */
+
+
+
+.btn:not(.nav-btns button){
+    background-color: #fff;
+    padding: 10px 28px;
+    outline: none !important;
+    border: 1px solid var(--color);
+
+}
+.btn:not(.nav-btns button):hover{
+    background-color: var(--color);
+    color: #fff;
+    border: #ed74ba;
+    
+}
+
+/* style collection */
+/* title collection */
+.title h2::before{
+    position: absolute ;
+    content: "";
+    width: 6px;
+    height: 50px;
+    background-color: var(--color);
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* btns collection */
+.active-filter-btn{
+    background-color: var(--color) !important;
+    color: #fff !important;
+    border-color: var(--color) !important;
+}
+.card-item{
+    box-shadow:0px 3px 9px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* offers */
+#offers{
+    background: url(../img/360_F_322007706_idyu1ibVVdEttVl5SphnZcigacP0j5mI.jpg) center/cover no-repeat;
+}
+#offers .row{
+    min-height: 60vh;
+}
+.offers-content span{
+    font-size: 28px;
+}
+.offers-content h2{
+    font-size: 60px;
+    font-family: var(--lg-font);
+}
+.offers-content .btn{
+    border-color: transparent !important;
+}
+/* ****** */
+
+
+
+
+
+/* Style contact Us */
+.form-area{
+    padding-top: 7%;
+}
+.row.single-form{
+    box-shadow : 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+}
+.left {
+    background: var(--color) ;
+    padding: 200px 98px;
+}
+.left h2{
+    font-family: poppins;
+    color: #fff;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.right{
+    padding: 60px 100px;
+    position: relative;
+}
+.right i{
+    position: absolute;
+    font-size: 80px;
+    left: -27px;
+    top: 40%;
+    color: #fff;
+}
+footer {
+    background-color: var(--color);
+}
+.copy-right{
+    background-color: #fff;
+}
+/* .form-control{
+    border: 2px solid black ;
+} */
+
+
+/*responsive*/
+
+@media (min-width:768px) and (max-width:991px){
+    .right i {
+	top: -52px;
+	transform: rotate(90deg);
+	left: 50%;
+}
+}
+
+@media (max-width:767px){
+    .left {
+  padding: 90px 15px;
+  text-align: center;
+}
+.left h2 {
+  font-size: 25px;
+}
+.right {
+  padding: 25px;
+}
+.right i {
+  top: -52px;
+  transform: rotate(90deg);
+  left: 46%;
+}
+    .right button {
+	width: 150px;
+	padding: 12px 0;
+}
+    
+}
+
+
+
+/* **************** */
