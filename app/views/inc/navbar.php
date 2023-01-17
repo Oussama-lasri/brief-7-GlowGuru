@@ -6,7 +6,7 @@
 
     <div class="order-lg-2 nav-btns">
          
-      <a href="<?php echo URLROOT; ?>/admin/login">
+      <a href="<?php echo URLROOT; ?>/admins/loginAdmin">
         <button type="button" class="btn">
           <i class="fa fa-sign-in position-relitive"></i>
           <span>login admin</span>

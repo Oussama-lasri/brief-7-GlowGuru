@@ -1,5 +1,5 @@
 <?php
-class User
+class Admin
 {
   private $db;
 
@@ -13,11 +13,11 @@ class User
   // login user
   public function login($email, $password)
   {
-    $this->db->query("SELECT * from client where email = :email");
+    $this->db->query("SELECT * from admin where email = :email");
     $this->db->bind(":email",$email);
     $row = $this->db->single();
-    $hached_password = $row->password;
-    if(password_verify($password,$hached_password)){
+    
+    if($password == $row->password){
       return $row;
     }else{
       return false;
@@ -28,7 +28,7 @@ class User
   // Find user by email
   public function findUserByEmail($email)
   {
-    $this->db->query('SELECT * FROM Client WHERE email = :email');
+    $this->db->query('SELECT * FROM admin WHERE email = :email');
     $this->db->bind(':email', $email);
 
     $row = $this->db->single();
@@ -44,7 +44,7 @@ class User
   // find user by ID 
   public function getUserById($id_user)
   {
-    $this->db->query('SELECT * FROM user WHERE id_user = :id');
+    $this->db->query('SELECT * FROM Admin WHERE id_admin = :id');
     $this->db->bind(':id', $id_user);
     $row = $this->db->single();
 
