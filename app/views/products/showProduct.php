@@ -2,8 +2,8 @@
 
 
 <div class="container-fluid px-4">
-<h3 class="fs-4 mb-3">Products</h3>
-<a href="<?php echo URLROOT; ?>/Products/addProduct" type="button" class="col-1 btn btn-success mx-2 my-3 ">Add</a>
+    <h3 class="fs-4 mb-3">Products</h3>
+    <a href="<?php echo URLROOT; ?>/Products/addProduct" type="button" class="col-1 btn btn-success mx-2 my-3 ">Add</a>
     <div class="row my-5">
         <div class="col" id>
             <table class="table bg-white rounded shadow-sm  table-hover ">
@@ -27,7 +27,12 @@
                             <td><?php echo $product->prix ?></td>
                             <td><?php echo $product->img_Produit ?></td>
                             <td><?php echo $product->description ?></td>
-                            <td><button type="button" class="btn btn-danger mr-2">supprimer</button><button type="button" class="btn btn-primary">modifier</button></td>
+                            <td>
+                                <form action="<?php echo URLROOT ?>/products/deleteProduct/<?php echo $product->id_produit ?>" method="post">
+                                    <button type="submit" class="btn btn-danger mr-2">supprimer</button>
+                                </form>
+                                <a href="<?php echo URLROOT ?>/products/updateProduct/<?php echo $product->id_produit ?>" class="btn btn-primary">modifier</a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
